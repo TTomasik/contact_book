@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+    </title>
+    
+    
+
+
+
+
+    
+    <style type="text/css">
+    body {
+        background-color: white;
+        
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    
+    header,
+    footer {
+        padding: 8px;
+        background-color: #d6d6d6;
+        
+    }
+    
+    a {
+	text-decoration: none;
+	color: black;
+	}
+	
+	a:hover { 
+	color: white; 
+	background-color: black; 
+	}
+	
+	
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3><a href = "/">Contact list</a> | <a href = "/new">Add contact</a> | <a href = "/delete">Delete contact</a>
+          |  <a href = "/find">Find contact</a></h3>
+    </header>
+    <section>
+        {% block content %} {% endblock %}
+        
+    </section>
+    <footer>
+        <h5>
+        
+       
+        {{ now }}
+        </h5>
+    </footer>
+</body>
+
+</html>

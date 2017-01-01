@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+	{% for contact in contact_list %}
+	
+	<p> <a href=/show/{{ contact.id }}>{{ contact.name }} {{ contact.surname }}, phone: {{ contact.phone_number }}</a></p>
+	
+	
+	{% endfor %}
+	
+
+{% endblock %}
+
+
+

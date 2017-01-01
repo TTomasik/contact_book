@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ contact.name }} {{ contact.surname }}{% endblock %}
+
+{% block content %}
+
+<form action="" method="POST">
+
+{% csrf_token %}
+
+
+<p><b>Current Name:</b> {{ contact.name	}} <input type="text" name="contact_name" value="Edit Name"></p>
+<p><b>Current Surname:</b> {{ contact.surname }} <input type="text" name="contact_surname" value="Edit Surname"> </p>
+<p><b>Current Mail:</b> {{ contact.mail	}} <input type="text" name="contact_mail" value="Edit Mail"></p>
+<p><b>Current Phone:</b> {{ contact.phone_number }} <input type="text" name="contact_phone_number" value="Edit Phone"></p>
+<p><input type="submit" name="editContact" value="Save changes"></p>
+</form>
+
+{% endblock %}
+
+	
+	

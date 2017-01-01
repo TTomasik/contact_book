@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="" method="POST">
+{% csrf_token %}
+	<p>
+		<input type="submit" name="deleteContact" value="Delete selected">
+	</p>
+
+
+	{% for contact in contact_list %}
+	
+	<p>
+	<input type="checkbox" name="name" value="{{ contact.id }}">
+	 {{ contact.name }} {{ contact.surname }}, phone: {{ contact.phone_number }}  
+	 </p>
+	 
+	
+	
+	{% endfor %}
+</form>	
+
+{% endblock %}
+
+
+
+

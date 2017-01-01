@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<p>
+	<form action="" method="POST">
+	{% csrf_token %}
+	<input type="submit" name="sort" value="Sort by name">
+    <input type="submit" name="sort" value="Sort by modification">
+    </form>
+    </p>
+
+	{% for contact in contact_list %}
+	
+	<p> <a href=/show/{{ contact.id }}>{{ contact.name }} {{ contact.surname }}, phone: {{ contact.phone_number }}</a></p>
+	
+	
+	{% endfor %}
+	
+
+{% endblock %}
+
+
+
+
+

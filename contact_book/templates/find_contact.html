@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Choose one option to find by:</p>
+<form action="" method="POST">
+
+	{% csrf_token %}
+	
+	<p>
+	<input type="text" name="contact_surname" value="Find by surname">
+	<input type="submit" name="findContact" value="Find">
+	</p>
+	
+
+</form>
+
+
+{% endblock %}
